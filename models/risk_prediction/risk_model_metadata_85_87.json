@@ -1,0 +1,39 @@
+{
+    "project": "ContractIQ",
+    "dataset": "Dataset1",
+    "model": "Random Forest",
+    "accuracy_target": "85%-87%",
+    "selected_threshold": 0.23,
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "target": "NEXT_YEAR_RISK",
+    "excluded_future_outcome": "NEXT_YEAR_SAVINGS_RATE",
+    "train_rows": 34267,
+    "test_rows": 8567,
+    "year_min": 2018,
+    "year_max": 2023,
+    "unique_acos": 7500,
+    "risk_cases": 5967,
+    "nonrisk_cases": 36867,
+    "risk_rate": 0.13930522482140356,
+    "accuracy": 0.8554920042021711,
+    "precision": 0.48058671268334774,
+    "recall": 0.46689019279128247,
+    "f1": 0.4736394557823129,
+    "roc_auc": 0.7947650736338068,
+    "pr_auc": 0.4859891768125886,
+    "random_forest_parameters": {
+        "n_estimators": 400,
+        "max_depth": 12,
+        "min_samples_leaf": 5,
+        "max_features": "0.7"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "weights": {
+        "N_AB": 0.8571428656578064,
+        "PREVIOUS_SAVINGS_RATE": 1.1904762983322144,
+        "PREVIOUS_QUALITY_SCORE": 1.0952380895614624,
+        "PREVIOUS_PERFORMANCE_GAP_PCT": 1.0952380895614624,
+        "EXPENDITURE_GROWTH_PCT": 0.9523810148239136,
+        "BENCHMARK_GROWTH_PCT": 0.9523810148239136,
+        "BENEFICIARY_GROWTH_PCT": 0.8571428656578064,
+        "QUALITY_CHANGE": 1.0
+    },
+    "method": "StandardScaler followed by feature-weighted Euclidean distance",
+    "target_used_for_similarity": false,
+    "target": "NEXT_YEAR_SAVINGS_RATE"
+}

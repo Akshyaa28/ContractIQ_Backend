@@ -1,0 +1,7 @@
+{
+    "selected_model": "Random Forest",
+    "validation_year": 2023,
+    "MAE": 0.01185456023204709,
+    "RMSE": 0.015506912035225882,
+    "R2": 0.7596249166393463
+}

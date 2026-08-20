@@ -1,0 +1,31 @@
+{
+    "project": "ContractIQ",
+    "model": {
+        "type": "RandomForestClassifier",
+        "file": "I:\\ContractIQ(!)\\models\\risk_prediction\\risk_random_forest_85_87.joblib",
+        "classification_threshold": 0.23
+    },
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "input": "I:\\ContractIQ(!)\\data\\processed\\Dataset1_Scoring_2024.csv",
+    "output": "I:\\ContractIQ(!)\\models\\risk_prediction\\Dataset1_Scoring_2024_Risk_Predictions_Final.csv",
+    "rows_scored": 7166,
+    "predicted_risk_cases": 1029,
+    "predicted_non_risk_cases": 6137,
+    "predicted_risk_rate": 0.1435947530002791,
+    "notes": [
+        "Production model is the validated Random Forest.",
+        "Production classification threshold is 0.23.",
+        "No target labels are modified during prediction.",
+        "NEXT_YEAR_SAVINGS_RATE is not used as a predictor.",
+        "Prediction uses the same eight model features used during training."
+    ]
+}

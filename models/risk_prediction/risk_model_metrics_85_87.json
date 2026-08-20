@@ -1,0 +1,51 @@
+{
+    "accuracy_constraint": {
+        "minimum": 0.85,
+        "maximum": 0.87,
+        "satisfied": true
+    },
+    "selected_model": "Random Forest",
+    "threshold": 0.23,
+    "test_metrics": {
+        "accuracy": 0.8554920042021711,
+        "precision": 0.48058671268334774,
+        "recall": 0.46689019279128247,
+        "f1": 0.4736394557823129,
+        "roc_auc": 0.7947650736338068,
+        "pr_auc": 0.4859891768125886,
+        "true_negative": 6772,
+        "false_positive": 602,
+        "false_negative": 636,
+        "true_positive": 557,
+        "threshold": 0.23
+    },
+    "logistic_regression_metrics": {
+        "accuracy": 0.8614450799579783,
+        "precision": 0.575,
+        "recall": 0.019279128248113998,
+        "f1": 0.0373073803730738,
+        "roc_auc": 0.6871603884061964,
+        "pr_auc": 0.28553629520476165,
+        "true_negative": 7357,
+        "false_positive": 17,
+        "false_negative": 1170,
+        "true_positive": 23,
+        "threshold": 0.5
+    },
+    "risk_cases": 5967,
+    "nonrisk_cases": 36867,
+    "risk_rate": 0.13930522482140356,
+    "train_rows": 34267,
+    "test_rows": 8567,
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "target": "NEXT_YEAR_RISK"
+}

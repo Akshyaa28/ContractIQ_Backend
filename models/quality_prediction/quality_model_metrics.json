@@ -1,0 +1,19 @@
+{
+    "model_type": "Ridge",
+    "target": "target_Quality_Score_T1",
+    "test_year": 2024,
+    "train_years": "T1 2017\u20132023",
+    "cv_r2": 0.7883049027294362,
+    "cv_r2_percentage": 78.83049027294362,
+    "cv_mae": 2.5609935407322233,
+    "cv_rmse": 3.2180138679324215,
+    "test_r2": 0.8338394068652508,
+    "test_r2_percentage": 83.38394068652508,
+    "test_mae": 2.4612715115578156,
+    "test_rmse": 3.1123992745901456,
+    "within_1_pt_pct": 26.900000000000002,
+    "within_2_pts_pct": 49.4,
+    "within_3_pts_pct": 67.43333333333334,
+    "within_5_pts_pct": 88.7,
+    "r2_goal_met": true
+}

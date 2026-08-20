@@ -1,0 +1,21 @@
+{
+    "selected_model": "Random Forest",
+    "train_years": "2018-2022",
+    "test_year": 2023,
+    "train_rows": 35721,
+    "test_rows": 7113,
+    "mae": 0.013023654414971962,
+    "rmse": 0.016546526142599115,
+    "r2": 0.7263140765278349,
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "target": "NEXT_YEAR_SAVINGS_RATE"
+}

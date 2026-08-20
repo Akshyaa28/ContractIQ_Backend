@@ -1,0 +1,39 @@
+{
+    "model": "NearestNeighbors",
+    "method": "Weighted Euclidean Similarity",
+    "top_k": 5,
+    "candidate_k": 50,
+    "historical_reference_years": "2018-2023",
+    "scoring_year": 2024,
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "feature_weights": {
+        "N_AB": 0.8571428656578064,
+        "PREVIOUS_SAVINGS_RATE": 1.1904762983322144,
+        "PREVIOUS_QUALITY_SCORE": 1.0952380895614624,
+        "PREVIOUS_PERFORMANCE_GAP_PCT": 1.0952380895614624,
+        "EXPENDITURE_GROWTH_PCT": 0.9523810148239136,
+        "BENCHMARK_GROWTH_PCT": 0.9523810148239136,
+        "BENEFICIARY_GROWTH_PCT": 0.8571428656578064,
+        "QUALITY_CHANGE": 1.0
+    },
+    "target": "NEXT_YEAR_SAVINGS_RATE",
+    "target_used_for_similarity": false,
+    "same_aco_excluded": true,
+    "one_record_per_twin_aco": true,
+    "option_c": {
+        "enabled": true,
+        "description": "Historically outperforming Twin is defined as a Twin whose next-year savings rate is above the median of the selected Top 5 Twins."
+    },
+    "historical_rows": 42834,
+    "scoring_rows": 7166,
+    "output_rows": 35830
+}

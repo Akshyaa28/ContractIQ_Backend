@@ -1,0 +1,27 @@
+{
+    "project": "ContractIQ",
+    "model_type": "Random Forest",
+    "target": "NEXT_YEAR_SAVINGS_RATE",
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "train_years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+    ],
+    "test_year": 2023,
+    "future_scoring_year": 2024,
+    "input_dataset": "I:\\ContractIQ(!)\\data\\processed\\Dataset1_Model_Forecast.csv",
+    "scoring_dataset": "I:\\ContractIQ(!)\\data\\processed\\Dataset1_Scoring_2024_Forecast.csv",
+    "model_path": "I:\\ContractIQ(!)\\models\\forecast_prediction\\forecast_best_model.joblib"
+}

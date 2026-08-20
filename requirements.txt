@@ -1,0 +1,47 @@
+# =============================================================
+# ContractIQ — Python Dependencies
+# =============================================================
+# Python version: 3.12
+# 
+# For local development:
+#   pip install -r requirements.txt
+#
+# For AWS Lambda deployment:
+#   See DEPLOYMENT.md for Lambda-specific instructions.
+#   Key constraint: Lambda has a 250 MB unzipped package limit
+#   and 512 MB /tmp for loading models at runtime.
+# =============================================================
+
+# --- Web Framework ---
+fastapi==0.115.0
+uvicorn==0.30.6
+pydantic==2.8.2
+starlette==0.38.6
+
+# --- ML / Data ---
+scikit-learn==1.5.1
+pandas==2.2.3
+numpy==1.26.4
+joblib==1.2.0
+scipy==1.13.1
+
+# --- Production Models (only sklearn needed for all 4 models) ---
+# The production models use ONLY:
+#   - Risk:     sklearn RandomForestClassifier
+#   - Forecast: sklearn RandomForestRegressor
+#   - Quality:  sklearn Pipeline (Ridge + StandardScaler + OneHotEncoder)
+#   - Twin:     sklearn NearestNeighbors + StandardScaler
+#
+# The following are used for TRAINING ONLY (not needed at runtime):
+# xgboost==3.0.0
+# lightgbm==4.6.0
+# catboost==1.2.8
+
+# --- Deployment ---
+mangum==0.19.0          # AWS Lambda adapter for FastAPI (ASGI → Lambda handler)
+python-multipart==0.0.9 # Required by FastAPI for form data
+
+# --- Development only (not needed in production) ---
+# matplotlib
+# seaborn
+# jupyter

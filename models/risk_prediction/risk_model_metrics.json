@@ -1,0 +1,45 @@
+{
+    "selected_model": "Random Forest",
+    "logistic_regression": {
+        "accuracy": 0.6361620170421385,
+        "precision": 0.21705882352941178,
+        "recall": 0.6186085498742665,
+        "f1": 0.32135858915741344,
+        "roc_auc": 0.6872538274188257,
+        "pr_auc": 0.2850731121169586,
+        "true_negative": 4712,
+        "false_positive": 2662,
+        "false_negative": 455,
+        "true_positive": 738
+    },
+    "random_forest": {
+        "accuracy": 0.926695459320649,
+        "precision": 0.928679817905918,
+        "recall": 0.5129924559932942,
+        "f1": 0.6609071274298056,
+        "roc_auc": 0.8773178729279444,
+        "pr_auc": 0.7291690455876425,
+        "true_negative": 7327,
+        "false_positive": 47,
+        "false_negative": 581,
+        "true_positive": 612
+    },
+    "training_rows": 34267,
+    "testing_rows": 8567,
+    "total_rows": 42834,
+    "risk_cases": 5967,
+    "nonrisk_cases": 36867,
+    "risk_rate": 0.13930522482140356,
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "target": "NEXT_YEAR_RISK",
+    "random_state": 42
+}

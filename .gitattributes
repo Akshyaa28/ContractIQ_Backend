@@ -1,0 +1,16 @@
+# =============================================================
+# ContractIQ — Git LFS Tracking
+# =============================================================
+# Large model files (>.joblib) and datasets tracked via Git LFS.
+# GitHub file size limit: 100 MB. LFS handles files above that.
+#
+# After cloning, run:  git lfs pull
+# =============================================================
+
+# --- Model files (all .joblib tracked by LFS) ---
+*.joblib filter=lfs diff=lfs merge=lfs -text
+
+# --- Large CSV data files ---
+data/processed/*.csv filter=lfs diff=lfs merge=lfs -text
+data/quality/*.csv filter=lfs diff=lfs merge=lfs -text
+Datasets/**/*.csv filter=lfs diff=lfs merge=lfs -text

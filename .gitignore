@@ -1,0 +1,56 @@
+# =============================================================
+# ContractIQ — .gitignore
+# =============================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+.env
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.kiro/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- OLD / superseded model files (should be deleted) ---
+models/risk_prediction/risk_random_forest.joblib
+models/risk_prediction/risk_logistic_regression.joblib
+models/forecast_prediction/forecast_best_model.joblib
+models/forecast_prediction/forecast_random_forest.joblib
+models/forecast_prediction/forecast_extra_trees.joblib
+models/forecast_prediction/forecast_gradient_boosting.joblib
+models/forecast_prediction/forecast_linear_regression.joblib
+
+# --- Old data / EDA (development only, not needed in production) ---
+aco_project2_qualityml/
+preprocessing/dataset1/plots/
+preprocessing/dataset1/reports/
+preprocessing/modeling/quick_r2_probe.py
+preprocessing/modeling/debug_features.py
+preprocessing/modeling/compare_all_models.py
+
+# --- Temp files ---
+*.tmp
+*.log

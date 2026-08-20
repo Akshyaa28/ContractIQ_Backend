@@ -1,0 +1,35 @@
+{
+    "project": "ContractIQ",
+    "dataset": "Dataset1",
+    "task": "Next-year ACO risk prediction",
+    "input_dataset": "I:\\ContractIQ(!)\\data\\processed\\Dataset1_Model_Risk.csv",
+    "selected_model": "Random Forest",
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "target": "NEXT_YEAR_RISK",
+    "excluded_future_outcome": "NEXT_YEAR_SAVINGS_RATE",
+    "model_training_years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+    ],
+    "rows": 42834,
+    "columns": 13,
+    "unique_acos": 7500,
+    "risk_cases": 5967,
+    "nonrisk_cases": 36867,
+    "risk_rate": 0.13930522482140356,
+    "train_test_split": "80/20 stratified",
+    "random_state": 42
+}

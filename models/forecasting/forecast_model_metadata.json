@@ -1,0 +1,43 @@
+{
+    "project": "ContractIQ",
+    "model_type": "Savings Forecast Regression",
+    "selected_model": "Random Forest",
+    "xgboost_available": true,
+    "input_dataset": "I:\\ContractIQ(!)\\data\\processed\\Dataset1_Model_Forecast.csv",
+    "scoring_dataset": "I:\\ContractIQ(!)\\data\\processed\\Dataset1_Scoring_2024_Forecast.csv",
+    "production_model": "I:\\ContractIQ(!)\\models\\forecasting\\forecast_random_forest.joblib",
+    "features": [
+        "N_AB",
+        "PREVIOUS_SAVINGS_RATE",
+        "PREVIOUS_QUALITY_SCORE",
+        "PREVIOUS_PERFORMANCE_GAP_PCT",
+        "EXPENDITURE_GROWTH_PCT",
+        "BENCHMARK_GROWTH_PCT",
+        "BENEFICIARY_GROWTH_PCT",
+        "QUALITY_CHANGE"
+    ],
+    "target": "NEXT_YEAR_SAVINGS_RATE",
+    "training_years": "2018-2023",
+    "validation_year": 2023,
+    "historical_rows": 42834,
+    "training_rows": 35721,
+    "validation_rows": 7113,
+    "scoring_rows": 7166,
+    "validation_metrics": {
+        "MAE": 0.01185456023204709,
+        "RMSE": 0.015506912035225882,
+        "R2": 0.7596249166393463
+    },
+    "selection_criterion": "Lowest 2023 time-based validation RMSE",
+    "forecast_category_rules": {
+        "HIGH SAVINGS": "forecast >= 0.03",
+        "MODERATE SAVINGS": "0.00 <= forecast < 0.03",
+        "LOW SAVINGS": "forecast < 0.00"
+    },
+    "forecast_summary": {
+        "mean": 0.017250671147479166,
+        "median": 0.016860935723126094,
+        "minimum": -0.09356828981348642,
+        "maximum": 0.1259079906974579
+    }
+}

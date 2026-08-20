@@ -1,4 +1,4 @@
-# ContractIQ — AWS Deployment Guide
+# ContractIQ — AWS
 
 ## Critical Constraints for AWS Lambda
 

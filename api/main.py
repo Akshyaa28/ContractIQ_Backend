@@ -15,10 +15,12 @@ from api.routes.quality  import router as quality_router
 from api.routes.twin     import router as twin_router
 from api.routes.auth     import router as auth_router
 from api.routes.predictions import router as predictions_router
+from api.routes.quality_predict import router as quality_predict_router
 
 from api.models.database import engine, Base
 from api.models.user import User  # noqa: F401 — ensure model is registered
 from api.models.prediction import PredictionInput, PredictionResult  # noqa: F401
+from api.models.quality_data import QualityData, QualityPredictionInput, QualityPredictionResult  # noqa: F401
 
 from api.services.risk_service import (
     get_model       as get_risk_model,
@@ -201,6 +203,7 @@ app.add_middleware(
 
 app.include_router(auth_router)
 app.include_router(predictions_router)
+app.include_router(quality_predict_router)
 app.include_router(risk_router)
 app.include_router(forecast_router)
 app.include_router(quality_router)

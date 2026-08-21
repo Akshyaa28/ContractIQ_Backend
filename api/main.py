@@ -1,14 +1,24 @@
 from contextlib import asynccontextmanager
 from pathlib import Path
 
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+
+# Load environment variables before anything else
+load_dotenv()
 
 from api.routes.risk     import router as risk_router
 from api.routes.forecast import router as forecast_router
 from api.routes.quality  import router as quality_router
 from api.routes.twin     import router as twin_router
+from api.routes.auth     import router as auth_router
+from api.routes.predictions import router as predictions_router
+
+from api.models.database import engine, Base
+from api.models.user import User  # noqa: F401 — ensure model is registered
+from api.models.prediction import PredictionInput, PredictionResult  # noqa: F401
 
 from api.services.risk_service import (
     get_model       as get_risk_model,
@@ -40,9 +50,7 @@ from api.services.twin_service import (
 @asynccontextmanager
 async def lifespan(application: FastAPI):
     """
-    Eagerly loads all three models at startup so the first request
-    on each endpoint is not penalised by a cold-load delay and any
-    missing-file or configuration error surfaces immediately.
+    Eagerly loads all models at startup and creates database tables.
     """
 
     project_root = Path(__file__).resolve().parents[1]
@@ -55,9 +63,17 @@ async def lifespan(application: FastAPI):
     print()
 
     # ----------------------------------------------------------
+    # 0. Database — create tables if they don't exist
+    # ----------------------------------------------------------
+    print("  [0/4] Creating database tables ...")
+    Base.metadata.create_all(bind=engine)
+    print("        Tables ready  ✓")
+
+    # ----------------------------------------------------------
     # 1. Risk model
     # ----------------------------------------------------------
-    print("  [1/3] Loading risk prediction model ...")
+    print()
+    print("  [1/4] Loading risk prediction model ...")
     print(f"        File      : {RISK_MODEL_PATH.name}")
     print(f"        Threshold : {RISK_THRESHOLD}")
     risk_model = get_risk_model()
@@ -183,6 +199,8 @@ app.add_middleware(
 # ROUTES
 # ============================================================
 
+app.include_router(auth_router)
+app.include_router(predictions_router)
 app.include_router(risk_router)
 app.include_router(forecast_router)
 app.include_router(quality_router)

@@ -43,6 +43,7 @@ class QualityByAcoRequest(BaseModel):
 
 class QualityByAcoResponse(BaseModel):
     """Response with prediction result."""
+    input_id: str
     aco_id: str
     year_t: int
     predicted_quality_score: float
@@ -176,6 +177,7 @@ def predict_quality_by_aco(
     # ──────────────────────────────────────────────────────────
 
     return QualityByAcoResponse(
+        input_id=str(input_record.id),
         aco_id=request.aco_id,
         year_t=request.year_t,
         predicted_quality_score=prediction["predicted_quality_score"],

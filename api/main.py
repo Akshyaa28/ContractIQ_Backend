@@ -16,6 +16,7 @@ from api.routes.twin     import router as twin_router
 from api.routes.auth     import router as auth_router
 from api.routes.predictions import router as predictions_router
 from api.routes.quality_predict import router as quality_predict_router
+from api.routes.chat     import router as chat_router
 from agents.orchestrator.routes import router as agents_router
 
 from api.models.database import engine, Base
@@ -206,6 +207,7 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(predictions_router)
 app.include_router(quality_predict_router)
+app.include_router(chat_router)
 app.include_router(agents_router)
 app.include_router(risk_router)
 app.include_router(forecast_router)

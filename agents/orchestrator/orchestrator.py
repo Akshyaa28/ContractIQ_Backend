@@ -1,8 +1,10 @@
 """
-Agent Orchestrator.
+Agent Orchestrator
+==================
 Routes to the correct specialized agent based on analysis_type.
 Never executes unrelated agents.
 """
+
 from agents.risk_agent.agent import run_risk_agent
 from agents.forecast_agent.agent import run_forecast_agent
 from agents.twin_agent.agent import run_twin_agent
@@ -17,15 +19,8 @@ AGENT_MAP = {
 
 
 def route_to_agent(context: dict) -> dict:
-    """
-    Route to the correct agent based on analysis_type.
-    context must contain 'analysis_type'.
-    Returns the agent's structured JSON output.
-    """
+    """Route to the correct agent based on analysis_type in context."""
     analysis_type = context.get("analysis_type")
-
     if analysis_type not in AGENT_MAP:
         raise ValueError(f"Unsupported analysis type: {analysis_type}")
-
-    agent_fn = AGENT_MAP[analysis_type]
-    return agent_fn(context)
+    return AGENT_MAP[analysis_type](context)

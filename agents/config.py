@@ -1,3 +1,5 @@
+"""Agent layer configuration."""
+
 import os
 from dotenv import load_dotenv
 

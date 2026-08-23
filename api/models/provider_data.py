@@ -1,0 +1,53 @@
+"""Provider data lookup table — loaded from filtered_provider_dataset CSV."""
+
+from sqlalchemy import Column, Float, Integer, String
+from api.models.database import Base
+
+
+class ProviderData(Base):
+    __tablename__ = "provider_data"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    provider_id = Column(String(100), nullable=False, index=True)
+    aco_id = Column(String(50), nullable=False, index=True)
+    performance_year = Column(Integer, nullable=False, index=True)
+    provider_type = Column(String(50), nullable=False)
+    specialty = Column(String(100), nullable=False)
+    beneficiary_count = Column(Integer, nullable=False)
+    hcc_risk_aged_dual = Column(Float)
+    admissions_per_1000 = Column(Float)
+    inpatient_expenditure = Column(Float)
+    outpatient_expenditure = Column(Float)
+    professional_expenditure = Column(Float)
+    snf_expenditure = Column(Float)
+    home_health_expenditure = Column(Float)
+    ed_visits_per_1000 = Column(Float)
+    snf_admission_rate = Column(Float)
+    pcp_visits_per_1000 = Column(Float)
+    specialist_visits_per_1000 = Column(Float)
+    hcc_risk_aged_nondual = Column(Float)
+    hcc_risk_disabled = Column(Float)
+    hcc_risk_esrd = Column(Float)
+    pcp_visits_per_1000_missing = Column(Integer)
+    specialist_visits_per_1000_missing = Column(Integer)
+    aco_avg_total_expenditure = Column(Float)
+    aco_avg_per_capita_expenditure = Column(Float)
+    aco_avg_quality_score = Column(Float)
+    aco_avg_admissions_per_1000 = Column(Float)
+    aco_avg_ed_visits_per_1000 = Column(Float)
+    aco_avg_snf_admission_rate = Column(Float)
+    aco_avg_hcc_risk_aged_dual = Column(Float)
+    aco_std_total_expenditure = Column(Float)
+    aco_std_per_capita_expenditure = Column(Float)
+    aco_std_quality_score = Column(Float)
+    aco_std_admissions_per_1000 = Column(Float)
+    aco_std_ed_visits_per_1000 = Column(Float)
+    aco_std_snf_admission_rate = Column(Float)
+    aco_std_hcc_risk_aged_dual = Column(Float)
+    cost_vs_aco = Column(Float)
+    per_capita_vs_aco = Column(Float)
+    quality_vs_aco = Column(Float)
+    admissions_vs_aco = Column(Float)
+    ed_visits_vs_aco = Column(Float)
+    snf_admission_vs_aco = Column(Float)
+    risk_vs_aco = Column(Float)

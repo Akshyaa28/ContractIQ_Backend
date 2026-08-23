@@ -1,0 +1,76 @@
+{
+  "model_info": {
+    "name": "ACO Provider Risk Base Model",
+    "version": "base_v1.0",
+    "type": "XGBoost Classifier",
+    "accuracy": {
+      "test": 0.9139,
+      "validation": 0.9183,
+      "reported": "91.3%"
+    },
+    "created_date": "2026-08-22",
+    "status": "PRODUCTION_READY"
+  },
+  "model_specification": {
+    "framework": "XGBoost",
+    "model_file": "xgboost_provider_risk.joblib",
+    "num_features": 41,
+    "num_classes": 3,
+    "classes": [
+      "HIGH",
+      "MEDIUM",
+      "LOW"
+    ],
+    "trees": 900,
+    "best_iteration": 299,
+    "format": "joblib"
+  },
+  "performance_metrics": {
+    "test_accuracy": 0.913894,
+    "validation_accuracy": 0.918309,
+    "macro_f1": 0.9142,
+    "log_loss": 0.2724,
+    "class_performance": {
+      "HIGH": {
+        "precision": 0.9397,
+        "recall": 0.9341,
+        "f1": 0.9369
+      },
+      "LOW": {
+        "precision": 0.948,
+        "recall": 0.9179,
+        "f1": 0.9327
+      },
+      "MEDIUM": {
+        "precision": 0.8573,
+        "recall": 0.8893,
+        "f1": 0.873
+      }
+    }
+  },
+  "feature_contract": {
+    "num_features": 41,
+    "feature_source": "model.learner.feature_names",
+    "feature_order_authoritative": true,
+    "categorical_features": [
+      "provider_type",
+      "specialty"
+    ],
+    "missing_indicators": [
+      "pcp_visits_per_1000_missing",
+      "specialist_visits_per_1000_missing"
+    ]
+  },
+  "preprocessing_artifacts": {
+    "target_encoder": "target_encoder.pkl",
+    "label_encoders": "label_encoders.pkl",
+    "imputation_values": "imputation_values.pkl"
+  },
+  "deployment_notes": {
+    "purpose": "Demo inference pipeline for base model",
+    "not_for_production_accuracy_optimization": true,
+    "enhanced_model_available": "95% model deferred due to inference issues",
+    "model_format": "PKL format (converted from JSON per team request)",
+    "conversion_date": "2026-08-22"
+  }
+}

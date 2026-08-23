@@ -1,0 +1,125 @@
+{
+  "what_if_simulator_config": {
+    "description": "Top 5 most important features for risk prediction",
+    "model_accuracy": "91.3%",
+    "total_feature_importance_covered": 0.46323469281196594,
+    "coverage_percentage": 46.3234748840332
+  },
+  "metrics": [
+    {
+      "rank": 1,
+      "feature_name": "ed_visits_vs_aco",
+      "user_friendly_name": "Ed Visits Vs Aco",
+      "importance_score": 0.12866462767124176,
+      "metric_type": "benchmark_comparison",
+      "statistics": {
+        "min": -749.3857242024802,
+        "max": 1694.7352197964672,
+        "mean": 1.0556557480406366,
+        "median": -22.274384476064085,
+        "std": 186.08155098911305
+      },
+      "recommended_range": {
+        "min": -371.1074462301855,
+        "max": 373.21875772626674,
+        "suggested_values": [
+          -117.82674545439431,
+          1.0556557480406366,
+          94.81647922779462
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "feature_name": "quality_vs_aco",
+      "user_friendly_name": "Quality vs ACO Benchmark",
+      "importance_score": 0.09315904974937439,
+      "metric_type": "benchmark_comparison",
+      "statistics": {
+        "min": -18.181513636224025,
+        "max": 19.290959057336597,
+        "mean": -0.004591672450198228,
+        "median": 0.1518861425406896,
+        "std": 3.576493629789088
+      },
+      "recommended_range": {
+        "min": -7.1575789320283745,
+        "max": 7.148395587127978,
+        "suggested_values": [
+          -2.2146546013611186,
+          -0.004591672450198228,
+          2.1493609565338403
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "feature_name": "per_capita_vs_aco",
+      "user_friendly_name": "Per Capita Cost vs ACO",
+      "importance_score": 0.08338679373264313,
+      "metric_type": "benchmark_comparison",
+      "statistics": {
+        "min": -34533.78780176524,
+        "max": 59729.32597153117,
+        "mean": 28.526259428692246,
+        "median": -342.57738592403075,
+        "std": 4435.416546550647
+      },
+      "recommended_range": {
+        "min": -8842.306833672601,
+        "max": 8899.359352529986,
+        "suggested_values": [
+          -2280.929122720203,
+          28.526259428692246,
+          2011.916222456148
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "feature_name": "admissions_vs_aco",
+      "user_friendly_name": "Admissions Vs Aco",
+      "importance_score": 0.0790439024567604,
+      "metric_type": "benchmark_comparison",
+      "statistics": {
+        "min": -356.6849417483372,
+        "max": 888.0762521776373,
+        "mean": 1.6949329406015514,
+        "median": -8.551725990230437,
+        "std": 83.24104328496679
+      },
+      "recommended_range": {
+        "min": -164.78715362933204,
+        "max": 168.17701951053513,
+        "suggested_values": [
+          -49.70206930421605,
+          1.6949329406015514,
+          41.884344834055526
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "feature_name": "snf_admission_vs_aco",
+      "user_friendly_name": "Skilled Nursing Facility vs ACO",
+      "importance_score": 0.07898031920194626,
+      "metric_type": "benchmark_comparison",
+      "statistics": {
+        "min": -327.29737686973823,
+        "max": 534.168389819242,
+        "mean": 0.24973011858496155,
+        "median": -1.3195334619346593,
+        "std": 29.093706639215057
+      },
+      "recommended_range": {
+        "min": -57.93768315984515,
+        "max": 58.43714339701508,
+        "suggested_values": [
+          -9.312657030346102,
+          0.24973011858496155,
+          7.228233875457704
+        ]
+      }
+    }
+  ]
+}
